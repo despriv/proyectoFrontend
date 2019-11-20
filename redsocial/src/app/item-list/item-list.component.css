@@ -1,0 +1,7 @@
+#caja li{
+    width: 35em;
+    background-color: rgb(200,200,200);;
+    border: black 3px solid;
+    margin-bottom:5px;
+    line-height: 5px; 
+};

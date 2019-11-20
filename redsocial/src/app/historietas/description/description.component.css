@@ -1,13 +1,33 @@
 #description {
     margin-top: 1%;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
+
+#description p{
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
 #description textarea{
-    font-size: xx-small;
+    font-size: small;
     font-family: "Comic Sans MS";
+    margin-left: 5%;
+    border: black 3px solid;
 }
 
 #description label{
-    border-color: grey;
+    background-color: rgb(200,200,200);;
+    border: black 3px solid;
+}
+
+#description button{
+    background: rgb(120,120, 120);
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: rgb(80,80, 80);
+    font-weight: bold;
+    font-family: "Comic Sans MS";
+    margin-left: 450px;
+    margin-bottom: 5px;
 }

@@ -1,0 +1,11 @@
+{
+  "item-list": [
+    {
+      "nombre":"Diego",
+      "apellido":"Espejo",
+      "historieta":"Esto es una historieta 1",
+      "fecha":"19/11/2019",
+      "reaccion":1
+    }
+  ]
+}

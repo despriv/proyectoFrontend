@@ -12,6 +12,9 @@ import { MisColegasComponent } from './mis-colegas/mis-colegas.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { MisHistorietasComponent } from './historietas/mis-historietas/mis-historietas.component';
 import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
+import { ItemListComponent } from './item-list/item-list.component';
+import { ItemListService } from './item-list/item-list.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,14 +26,16 @@ import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
     MisColegasComponent,
     EventosComponent,
     MisHistorietasComponent,
-    PiePaginaComponent
+    PiePaginaComponent,
+    ItemListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    routing
+    routing,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ItemListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

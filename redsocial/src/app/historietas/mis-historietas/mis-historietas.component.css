@@ -1,13 +1,23 @@
 #historietas {
     margin-top: 1%;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
+
+#historietas p{
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
 #historietas textarea{
-    font-size: xx-small;
+    font-size: small;
     font-family: "Comic Sans MS";
+    margin-left: 5%;
+    border: black 3px solid;
 }
 
 #historietas label{
-    border-color: grey;
+    width: 41.4em;
+    background-color: rgb(200,200,200);;
+    border: black 3px solid;
 }
