@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemListService } from 'src/app/item-list/item-list.service';
 
 @Component({
   selector: 'app-description',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DescriptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private itemListService: ItemListService) { }
 
   ngOnInit() {
+  }
+
+  desc: string = "123123213";
+
+  getDescripcion(){
+    //this.desc=this.itemListService;
   }
 
 }

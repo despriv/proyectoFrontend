@@ -15,6 +15,7 @@ import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemListService } from './item-list/item-list.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ItemListService],
   bootstrap: [AppComponent]

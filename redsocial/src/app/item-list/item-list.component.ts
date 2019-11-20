@@ -14,9 +14,7 @@ export class ItemListComponent implements OnInit {
 
   myItems: Item[];
 
-  //descriptionHistory : {
-  mensajito = "Escribe tu historieta aca ....";
-  //}
+  mensaje: {mensajito : "Escribe tu historieta aca ....";}  
 
   constructor(private itemListService: ItemListService) { }
 
@@ -54,7 +52,7 @@ export class ItemListComponent implements OnInit {
     item.nombre="Diego";
     item.apellido="Espejo";
     item.fecha="20/11/2019";
-    item.historieta=this.mensajito;
+    item.historieta=this.mensaje.mensajito;
     this.itemListService.addItem(item)
       .subscribe(item => this.myItems.push(item));
   }
