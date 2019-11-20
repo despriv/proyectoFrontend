@@ -14,15 +14,28 @@ export class ItemListComponent implements OnInit {
 
   myItems: Item[];
 
+  //descriptionHistory : {
+  mensajito = "Escribe tu historieta aca ....";
+  //}
+
   constructor(private itemListService: ItemListService) { }
 
   ngOnInit() {
-    this.myItems = ITEMS;
+    this.getItem();
   }
 
   //GET
   getItem() {
     this.itemListService.getItemList()
+    .subscribe( (data: Item[])  => this.myItems = data, //ok
+                error => console.error(error),          //error
+                () => console.log('Item list ha cargado') //final (por defecto)
+    )
+  };
+
+  //GET BY ID
+  getItemId(item: Item) {
+    this.itemListService.getItemById(item.id)
     .subscribe( (data: Item[]) => this.myItems = data, //ok
                 error => console.error(error),          //error
                 () => console.log('Item list ha cargado') //final (por defecto)
@@ -34,6 +47,18 @@ export class ItemListComponent implements OnInit {
     this.itemListService.addItem(item)
       .subscribe(item => this.myItems.push(item));
   };
+
+  //AddHistorieta
+  addHistory(item: Item){
+    item.id=1;
+    item.nombre="Diego";
+    item.apellido="Espejo";
+    item.fecha="20/11/2019";
+    item.historieta=this.mensajito;
+    this.itemListService.addItem(item)
+      .subscribe(item => this.myItems.push(item));
+  }
+
 
   //PUT
   putItem(item: Item) {

@@ -23,8 +23,8 @@ export class ItemListService {
     getItemList() {
         return this.http.get(URL_BASE);
     }
-    getItemById(nombre: string) {
-        return this.http.get(`${URL_BASE}/${nombre}`);
+    getItemById(id: number) {
+        return this.http.get(`${URL_BASE}/${id}`);
     }
 
     //POST
@@ -34,7 +34,7 @@ export class ItemListService {
 
     //PUT
     updateItem(item: Item): Observable<Item> {
-        const url = `${URL_BASE}/${item.nombre}`;
+        const url = `${URL_BASE}/${item.id}`;
         return this.http.put<Item>(url, item, httpOptions);
     }
 }

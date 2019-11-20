@@ -1,6 +1,7 @@
 import { Item } from './item.model';
 
 export const ITEMS : Item[] = [{
+    "id":1,
     "nombre":"Diego",
     "apellido":"Espejo",
     "historieta":"Esto es una historieta 1",
@@ -8,6 +9,7 @@ export const ITEMS : Item[] = [{
     "reaccion":1
 },
 {
+    "id":2,
     "nombre":"R",
     "apellido":"A",
     "historieta":"Esto es una historieta 2",
